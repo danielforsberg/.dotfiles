@@ -1,0 +1,15 @@
+[user]
+  name = Daniel Forsberg
+  email = danielforsberg89@gmail.com
+
+[github]
+  user = danielforsberg
+
+[pull]
+  rebase = true
+
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
