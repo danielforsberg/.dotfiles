@@ -1,20 +1,14 @@
-#vi:ft=ruby:
 tap 'homebrew/services'
 
 brew 'curl'
 brew 'git'
-brew 'nvm'
 brew 'vim'
 brew 'tree'
 brew 'wget'
-brew 'zsh'
-brew 'zsh-autosuggestions'
-brew 'zsh-syntax-highlighting'
 
 tap 'homebrew/cask'
 
 cask 'slack'
-cask 'docker'
 cask 'firefox'
 cask 'google-chrome'
 cask 'iterm2'
