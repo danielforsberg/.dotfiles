@@ -10,3 +10,5 @@ nvm use node
 
 npm install -g typescript
 npm install -g yarn
+
+ln -fs ~/.dotfiles/.gitconfig .gitconfig
