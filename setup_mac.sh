@@ -18,3 +18,7 @@ chmod 755 ~/.dotfiles/zsh/install.sh
 echo "4. Setup Powerline fonts"
 chmod 755 ~/.dotfiles/fonts/install.sh
 ~/.dotfiles/fonts/install.sh
+
+echo "5. Setup ssh key"
+ssh-keygen -t rsa
+pbcopy < ~/.ssh/id_rsa.pub
