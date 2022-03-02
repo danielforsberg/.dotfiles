@@ -27,6 +27,7 @@ echo "6. Setup ssh key"
 read -e -p "Enter the filename for your key: " SSH_KEY
 ssh-keygen -t rsa -f ~/.ssh/$SSH_KEY.key
 pbcopy < ~/.ssh/$SSH_KEY.key.pub
+echo "Public ssh key copied to clipboard"
 
 echo "7. Setup npm registry"
 read -e -p "Enter your organization name: " ORGANIZATION
