@@ -20,5 +20,11 @@ chmod 755 ~/.dotfiles/fonts/install.sh
 ~/.dotfiles/fonts/install.sh
 
 echo "5. Setup ssh key"
-ssh-keygen -t rsa
-pbcopy < ~/.ssh/id_rsa.pub
+read -e -p "Enter the filename for your key: " SSH_KEY
+ssh-keygen -t rsa -f ~/.ssh/$SSH_KEY.key
+pbcopy < ~/.ssh/$SSH_KEY.key.pub
+
+echo "6. Setup npm registry"
+read -e -p "Enter your organization name: " ORGANIZATION
+read -e -p "Enter your Github access token: " TOKEN
+echo "@$ORGANIZATION:registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=$TOKEN" > ~/.npmrc
