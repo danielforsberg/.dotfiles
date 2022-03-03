@@ -5,6 +5,7 @@ brew 'git'
 brew 'vim'
 brew 'tree'
 brew 'wget'
+brew 'fzf'
 
 tap 'homebrew/cask'
 

@@ -2,7 +2,7 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="amuse"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 
