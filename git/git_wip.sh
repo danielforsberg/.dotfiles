@@ -45,8 +45,23 @@ holiday_instructions=(
 "⛄ Roll the snow and stick the arms"
 )
 
+unholiday_instructions=(
+"🎒 Unpack the sleigh and loosen the reins"
+"⭐ Take down the star and store the tree"
+"🧣 Melt the snowman and fold the scarf"
+"🛤️ Dismantle the sled and clear the hill"
+"🍽️ Eat the cookies and rinse the milk glass"
+"🐾 Rest the reindeer and park the sleigh"
+"🛠️ Close the workshop and lock the gears"
+"🎼 Stop the carols and pack the harp"
+"🍷 Finish the wine and clean the mugs"
+"🧦 Empty the stockings and seal the chimney"
+"📤 Unstring the lights and box the ornaments"
+"❌ Break the snowman and store the decorations"
+)
+
 # Select a random instruction
-random_index=$(( RANDOM % ${#holiday_instructions[@]} ))
-message="${holiday_instructions[$random_index]}"
+random_index=$(( RANDOM % ${#unholiday_instructions[@]} ))
+message="${unholiday_instructions[$random_index]}"
 
 git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "$message"
