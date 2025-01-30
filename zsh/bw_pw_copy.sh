@@ -8,21 +8,23 @@ fi
 
 # Ensure Bitwarden CLI is logged in and unlocked
 if ! BW_SESSION=$(bw unlock --raw); then
-    echo "Failed to unlock Bitwarden. Please log in first."
+    echo "Failed to unlock Bitwarden. Please try again."
     exit 1
 fi
 export BW_SESSION
 
-# Prompt user for item name
-read -rp "Enter the name of the password to copy: " ITEM_NAME
+if [[ -z "$1" ]]; then
+    # Prompt user for item name
+    read -rp "Enter the name of the password to copy: " ITEM_NAME
+    else
+    ITEM_NAME=$1
+fi
 
 # Search for the item
 ITEM_PASSWORD=$(bw list items --search "$ITEM_NAME" | jq -r '.[0].login.password')
 
-echo $ITEM_PASSWORD
-
+# Copy to clipboard
 echo -n "$ITEM_PASSWORD" | pbcopy
-
 echo "Password copied to clipboard."
 
 # Lock the vault
